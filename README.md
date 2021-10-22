@@ -1,6 +1,6 @@
 # Next.js TypeScript Material UI quality checking project
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Includes TypeScript, Material UI, ESLint, Jest, and React Testing Library
@@ -129,6 +129,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/jenniferOlsen"><img src="https://avatars.githubusercontent.com/u/5099732?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jenny Olsen</b></sub></a><br /><a href="https://github.com/MileTwo/nextjs-typescript-material-ui-eslint-jest/commits?author=jenniferOlsen" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/bcanfield"><img src="https://avatars.githubusercontent.com/u/12603953?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brandin Canfield</b></sub></a><br /><a href="#maintenance-bcanfield" title="Maintenance">🚧</a> <a href="#infra-bcanfield" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#security-bcanfield" title="Security">🛡️</a></td>
     <td align="center"><a href="http://linkedin.com/in/lucasguissgusmao"><img src="https://avatars.githubusercontent.com/u/37088202?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucas Guiss Gusmão</b></sub></a><br /><a href="https://github.com/MileTwo/nextjs-typescript-material-ui-eslint-jest/commits?author=lucasguiss" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.itschilitime.com/"><img src="https://avatars.githubusercontent.com/u/99800?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Bowman</b></sub></a><br /><a href="https://github.com/MileTwo/nextjs-typescript-material-ui-eslint-jest/commits?author=bowmanmc" title="Code">💻</a></td>
   </tr>
 </table>
 
