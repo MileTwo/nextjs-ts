@@ -1,7 +1,7 @@
 // you want to import from test-utils instead of testing-library/react since we overwrote the render function to support our wrapper providers
 import { render, screen } from '../test-utils';
-import Home, { getServerSideProps } from '../../pages/index';
-import { tools } from '../../lib/tools';
+import Home, { getServerSideProps } from 'pages/index';
+import { tools } from 'lib/tools';
 
 describe('Home page', () => {
     it('should render without errors', async () => {
