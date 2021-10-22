@@ -5,7 +5,7 @@ import { render } from '@testing-library/react';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 import { NextRouter } from 'next/router';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material';
-import theme from '../lib/theme';
+import theme from 'lib/theme';
 
 export * from '@testing-library/react';
 

@@ -1,10 +1,10 @@
 import { GetServerSideProps } from 'next';
 import { Typography, Theme, List, Grid } from '@mui/material';
 import { createStyles, makeStyles } from '@mui/styles';
-import Layout from '../components/layout';
-import ListItem, { Link } from '../components/list/ListItem';
+import Layout from 'components/layout';
+import ListItem, { Link } from 'components/list/ListItem';
 
-import { tools } from '../lib/tools';
+import { tools } from 'lib/tools';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({

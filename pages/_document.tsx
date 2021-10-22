@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@mui/styles';
 
-import theme from '../lib/theme';
+import theme from 'lib/theme';
 import React from 'react';
 
 // Fixes SSR with Material UI styles - https://developerhandbook.com/react/how-to-set-up-nextjs-material-ui/

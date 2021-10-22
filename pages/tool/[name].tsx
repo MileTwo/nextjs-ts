@@ -4,9 +4,9 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import { Tool, tools } from '../../lib/tools';
+import { Tool, tools } from 'lib/tools';
 import { ReactElement } from 'react';
-import Layout from '../../components/layout';
+import Layout from 'components/layout';
 
 const useStyles = makeStyles((theme: Theme) => ({
     description: {
