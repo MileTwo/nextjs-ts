@@ -23,7 +23,7 @@
         "start": "next start",
         "test": "jest",
         "type-check": "tsc",
-        "type-check:watch": "tsc --watch",
+        "type-check:watch": "tsc --watch --preserveWatchOutput",
         "quality": "npm run type-check && npm run lint && npm run test",
         "prepare": "husky install"
     },
