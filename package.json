@@ -1,6 +1,6 @@
 {
     "name": "nextjs-typescript-material-ui-eslint-jest",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "private": true,
     "dependencies": {
         "@emotion/react": "^11.11.1",
