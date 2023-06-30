@@ -5,7 +5,7 @@ describe('Home page', () => {
     it('should render without errors', async () => {
         render(
             <Layout title="Next.js example">
-                <div></div>
+                <div>Test</div>
             </Layout>
         );
         // header

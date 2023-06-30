@@ -1,5 +1,14 @@
 import { createTheme, responsiveFontSizes, ThemeOptions } from '@mui/material/styles';
 
+import { Roboto } from 'next/font/google';
+
+export const roboto = Roboto({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['latin'],
+    display: 'swap',
+    fallback: ['Helvetica', 'Arial', 'sans-serif'],
+});
+
 declare module '@mui/material/styles/createTypography' {
     interface Typography {
         fontWeightHeavy: number;
@@ -11,7 +20,7 @@ declare module '@mui/material/styles/createTypography' {
 
 const THEME: ThemeOptions = {
     typography: {
-        fontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(','),
+        fontFamily: roboto.style.fontFamily,
         fontWeightLight: 100,
         fontWeightMedium: 300,
         fontWeightRegular: 400,

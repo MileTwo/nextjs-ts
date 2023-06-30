@@ -24,6 +24,7 @@ type RenderUI = DefaultParams[0];
 type RenderOptions = DefaultParams[1] & { router?: Partial<NextRouter> };
 
 const mockRouter: NextRouter = {
+    forward: jest.fn(),
     basePath: '',
     isReady: true,
     pathname: '/',

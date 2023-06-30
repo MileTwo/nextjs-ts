@@ -1,13 +1,12 @@
 import { AppProps } from 'next/app';
-import { ThemeProvider, Theme, StyledEngineProvider } from '@mui/material/styles';
+import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from 'lib/theme';
 import React, { useEffect } from 'react';
+// import { LicenseInfo } from '@mui/x-data-grid-pro';
 
-declare module '@mui/styles/defaultTheme' {
-    // eslint-disable-next-line @typescript-eslint/no-empty-interface
-    interface DefaultTheme extends Theme {}
-}
+// Material-UI pro license
+// LicenseInfo.setLicenseKey(process.env.NEXT_PUBLIC_MUI_KEY);
 
 // Determines if we are running on server or in client.
 const isServerSideRendered = () => {
@@ -25,7 +24,6 @@ if (process.env.NODE_ENV !== 'production' && !isServerSideRendered()) {
         });
     });
 }
-
 const App = ({ Component, pageProps }: AppProps) => {
     useEffect(() => {
         // Remove the server-side injected CSS.
@@ -36,13 +34,13 @@ const App = ({ Component, pageProps }: AppProps) => {
     }, []);
 
     return (
-        <StyledEngineProvider injectFirst>
-            <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+            <StyledEngineProvider injectFirst>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
                 <CssBaseline />
                 <Component {...pageProps} />
-            </ThemeProvider>
-        </StyledEngineProvider>
+            </StyledEngineProvider>
+        </ThemeProvider>
     );
 };
 

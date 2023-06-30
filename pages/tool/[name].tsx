@@ -1,5 +1,4 @@
-import { Button, Grid, Theme, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { Button, Grid, Typography } from '@mui/material';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,29 +7,14 @@ import { Tool, tools } from 'lib/tools';
 import { ReactElement } from 'react';
 import Layout from 'components/layout';
 
-const useStyles = makeStyles((theme: Theme) => ({
-    description: {
-        maxWidth: '80ch',
-    },
-    root: {
-        padding: '.5em 2em',
-    },
-    title: {
-        paddingLeft: '1em',
-        color: theme.palette.primary.main,
-    },
-}));
-
 interface Props {
     tool?: Tool;
 }
 
 export default function ToolInfo({ tool }: Props): ReactElement {
-    const classes = useStyles();
-
     if (!tool) {
         return (
-            <Grid container spacing={4} className={classes.root}>
+            <Grid container spacing={4} sx={{ padding: '.5em 2em' }}>
                 <Grid item xs={12}>
                     <Breadcrumbs aria-label="breadcrumb">
                         <Link href="/" passHref>
@@ -49,7 +33,7 @@ export default function ToolInfo({ tool }: Props): ReactElement {
     return (
         <>
             <Layout title={`${tool.name} | Next.js example`}>
-                <Grid container spacing={4} className={classes.root}>
+                <Grid container spacing={4} sx={{ padding: '.5em 2em' }}>
                     <Grid item xs={12}>
                         <Breadcrumbs aria-label="breadcrumb">
                             <Link href="/" passHref>
@@ -61,12 +45,15 @@ export default function ToolInfo({ tool }: Props): ReactElement {
                     <Grid item xs={12} container justifyContent="center" alignItems="center">
                         {/* NextJS Image optimization example. Props are src(any file under the public dir), width, and height */}
                         {tool.image && <Image {...tool.image} data-testid="image" aria-hidden="true" />}
-                        <Typography variant="h2" className={classes.title}>
+                        <Typography
+                            variant="h2"
+                            sx={(theme) => ({ paddingLeft: '1em', color: theme.palette.primary.main })}
+                        >
                             {tool.name}
                         </Typography>
                     </Grid>
                     <Grid item xs={12} container justifyContent="center">
-                        <Typography variant="body1" className={classes.description}>
+                        <Typography variant="body1" sx={{ maxWidth: '80ch' }}>
                             {tool.description}
                         </Typography>
                     </Grid>

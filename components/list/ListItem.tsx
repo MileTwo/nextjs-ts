@@ -1,20 +1,7 @@
 import Image from '../Image';
-import { ListItem as MUIListItem, ListItemAvatar, Avatar, ListItemText, Grid, Typography, Theme } from '@mui/material';
-import { createStyles, makeStyles } from '@mui/styles';
+import { ListItem as MUIListItem, ListItemAvatar, Avatar, ListItemText, Grid, Typography } from '@mui/material';
 import Link from '../link/Link';
 import { Image as ImageType } from '../../pages/index';
-
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        info: {
-            justify: 'center',
-            padding: theme.spacing(2),
-        },
-        avatar: {
-            backgroundColor: theme.palette.grey[100],
-        },
-    })
-);
 
 export type Link = {
     label: string;
@@ -29,12 +16,11 @@ type Props = {
 };
 
 export default function ListItem({ name, image, link }: Props) {
-    const classes = useStyles();
     return (
         <MUIListItem divider>
             <Grid container alignItems="center">
                 <ListItemAvatar>
-                    <Avatar alt={name} className={classes.avatar}>
+                    <Avatar alt={name} sx={(theme) => ({ backgroundColor: theme.palette.grey[100] })}>
                         {/* NextJS Image optimization example. Props are src(any file under the public dir), width, and height */}
                         <Image image={image} name={name} />
                     </Avatar>
@@ -47,11 +33,13 @@ export default function ListItem({ name, image, link }: Props) {
                     item
                     xs={12}
                     md={3}
-                    className={classes.info}
+                    sx={(theme) => ({ justify: 'center', padding: theme.spacing(2) })}
                     justifyContent="flex-end"
                     alignItems="center"
                 >
-                    <Link href={link.href} as={link?.as} label={link.label} />
+                    <Link as={link?.as} underline="hover" color="inherit" href={link.href} aria-label={link.label}>
+                        {link.label}
+                    </Link>
                 </Grid>
             </Grid>
         </MUIListItem>
